@@ -2,7 +2,7 @@
 	<head>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<style>
-			#canvas{
+			#canvas, #div, img{
 				width:64px;
 				height: 96px;
 
@@ -12,10 +12,20 @@
   				image-rendering: -moz-crisp-edges;
   				image-rendering: -o-crisp-edges;
   				image-rendering: pixelated;
+			}
+
+			#image{
+				background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAYCAYAAADzoH0MAAAAdElEQVQ4je1SQQ6AMAgb+/+f8SIJAoWqN2OTXVxpS+dan4YypP3WRUjnijeiEqLWUkfU8D2JxGjIQdz9ZYYtEUbfgXS7rCpBFJHzlB14MA3Tw8gtCdgK0pDaZOgVbOexVCRgw2NxUaD68x4lQKlaAcrxR8YBVuMfA8+aGsYAAAAASUVORK5CYII=') no-repeat;
+			}
 		</style>
 	</head>
 	<body>
+		<p>This is a canvas:</p>
 		<canvas id="canvas" width="16" height="24"></canvas>
+		<p>This is a div with a background image:</p>
+		<div id="div"></div>
+		<p>This is an img tag:</p>
+		<img src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAYCAYAAADzoH0MAAAAdElEQVQ4je1SQQ6AMAgb+/+f8SIJAoWqN2OTXVxpS+dan4YypP3WRUjnijeiEqLWUkfU8D2JxGjIQdz9ZYYtEUbfgXS7rCpBFJHzlB14MA3Tw8gtCdgK0pDaZOgVbOexVCRgw2NxUaD68x4lQKlaAcrxR8YBVuMfA8+aGsYAAAAASUVORK5CYII='>
 		<script>
 			function draw() {
 			  var ctx = document.getElementById('canvas').getContext('2d');
